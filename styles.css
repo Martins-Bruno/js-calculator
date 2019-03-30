@@ -35,6 +35,7 @@ textarea {
   max-width: 498px;
   width: 100vw;
   height: 15vh;
+  min-height: 150px;
   background-color: #212121;
   color: #FFF;
   font-size: 2.5rem;
