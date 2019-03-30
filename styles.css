@@ -15,34 +15,68 @@ body {
 .container {
   display: flex;
   flex: 1;
-  flex-direction: column;
-  align-items: center;
+}
+
+.device {
+  min-height: 100vh;
+  max-height: 600px;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  flex-direction: column;
 }
 
-#display {
-  height: 40%;
-}
-
-#keyboard {
-  height: 60vh;
+.screen {
+  min-height: 160px;
+  height: 20vh;
 }
 
 textarea {
   display: flex;
   flex: 1;
-  max-width: 498px;
+  max-width: 500px;
   width: 100vw;
-  height: 15vh;
-  min-height: 150px;
+  min-height: 160px;
+  height: 20vh;
   background-color: #212121;
   color: #FFF;
   font-size: 2.5rem;
   text-align: right;
   resize: none;
   border: none;
-  padding: 50px 30px 0 0;
+  padding: 90px 30px 0 30px;
+}
+
+@media screen and (orientation: landscape) {
+
+  .screen {
+    min-height: 160px;
+    height: 30vh;
+  }
+  
+  textarea {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    width: 100vw;
+    min-height: 160px;
+    height: 30vh;
+    background-color: #212121;
+    color: #FFF;
+    font-size: 2.5rem;
+    text-align: right;
+    resize: none;
+    border: none;
+    padding: 55px 30px 0 30px;
+  }
+  
+}
+
+.keyboard {
+  height: 440px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
@@ -56,12 +90,11 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1px;
   width: 25%;
   background-color: #424242;
   height: 70px;
   transition: 100ms ease-in-out;
-  border: none;
+  border: 1px solid #212121;
   color: #FFF;
   font-size: 1.3rem;
 }
